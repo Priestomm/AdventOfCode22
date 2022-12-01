@@ -1,3 +1,4 @@
+import numpy as np
 
 lines = open('./data/calories', 'r').readlines()
 calories = [0]
@@ -12,3 +13,7 @@ for line in lines:
 
 print(calories)
 print(f"The elf number {calories.index(max(calories))} brings {max(calories)} calories")
+
+calories.sort()
+sumOfThreeMax = sum(calories[len(calories) - 3:])
+print(f"The sum of the three elves that have more calories is: {sumOfThreeMax}")
