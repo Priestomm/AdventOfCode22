@@ -11,9 +11,9 @@ for line in lines:
         elf += 1
         calories.insert(elf, 0)
 
-print(calories)
+# print(calories)
 print(f"The elf number {calories.index(max(calories))} brings {max(calories)} calories")
 
 calories.sort()
-sumOfThreeMax = sum(calories[len(calories) - 3:])
+sumOfThreeMax = sum(calories[-3:])
 print(f"The sum of the three elves that have more calories is: {sumOfThreeMax}")
